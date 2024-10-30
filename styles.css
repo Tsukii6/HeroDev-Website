@@ -144,6 +144,110 @@ body {
     border-radius: 5px;
 }
 
+/* Section 2 */
+.section2-container {
+    width: auto;
+    height: auto;
+    background-color: #2D3250;
+}
+
+.section2-h1 {
+    margin: 0;
+    padding-top: 4rem;
+    position: relative;
+    left: 80px;
+    color: white;
+}
+
+.card-container {
+    background-color: #F9B17A;
+    display: grid;
+    place-items: center;
+    margin-inline: 5rem;
+    padding-block-start: 3rem ;
+    padding-block-end: 6rem;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3.5rem;
+    row-gap: 4.7rem;
+}
+
+.card-article {
+    display: inline-block;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 1.5rem;
+}
+
+.card-data {
+    width: 220px;
+    background-color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -4rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto ;
+}
+
+.card-description {
+    font-size: .713rem;
+    display: block;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: .75rem;
+}
+
+.card-button {
+    text-decoration: none;
+    font-size: .813rem;
+    font-weight: 500;
+    color: #2D3250;
+  }
+
+  .card-button:hover {
+    text-decoration: underline;
+  }
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media only screen and (max-width: 600px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-img {
+        width: 250px;
+    }
+
+    .card-data {
+        width: 198px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1000px){
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-img {
+        width: 220px;
+    }
+
+    .card-data {
+        width: 186px;
+    }
+}
+
+
+
 
 
 
