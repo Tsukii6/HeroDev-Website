@@ -3,6 +3,11 @@
     font-family: "Raleway", sans-serif;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 
 /* Header */
 .navbar {
@@ -140,8 +145,7 @@
 }
 
 /* Section 2 */
-
-/*.section2-container {
+.section2-container {
     width: auto;
     height: auto;
     background-color: #2D3250;
@@ -156,7 +160,6 @@
 }
 
 .card-container {
-    background-color: #F9B17A;
     display: grid;
     place-items: center;
     margin-inline: 5rem;
@@ -170,10 +173,10 @@
 .card-article {
     display: inline-block;
     position: relative;
-    overflow: hidden; 
+    /* overflow: hidden;  */
 }
 
-/*.card-img {
+.card-img {
     width: 100%;
     border-radius: 1.5rem;
 }
@@ -182,12 +185,14 @@
     width: 220px;
     background-color: white;
     padding: 1rem 1.5rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
     border-radius: 1rem;
     position: absolute;
     bottom: -4rem;
     left: 0;
     right: 0;
     margin-inline: auto ;
+   
 }
 
 .card-description {
@@ -210,11 +215,12 @@
 
   .card-button:hover {
     text-decoration: underline;
-  }*\
+  }
+
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .card-container {
         grid-template-columns: 1fr;
     }
@@ -240,7 +246,57 @@
     .card-data {
         width: 186px;
     }
-} */
+}
+
+/* Footers */
+.footer-container {
+    width: auto;
+    background-color: #2D3250;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo {
+    width: 200px;
+}
+
+.logo img {
+    width: 150px;
+    position: relative;
+    left: -20px;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 30px;
+    margin-top: 0;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.logo p, .about p , .contact p{
+    color: rgba(255, 255, 255, 0.712);
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 0;
+    
+}
+
+.about h1, .contact h1{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 30px 0 20px 0;
+}
+
+.contact {
+    position: relative;
+    top: -12px;
+}
+
+
 
 /* === About Us Page Styles (Fatemeh code style starts here) === */
 
