@@ -1,0 +1,97 @@
+/* Table */
+.contact-table-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.contact-table-section h2 {
+  font-size: 1.8rem;
+  color: #FFA500;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #333A56; /* Darker shade of blue to match the theme */
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contact-table th,
+.contact-table td {
+  padding: 15px;
+  text-align: center;
+  font-size: 1rem;
+  color: #2D3250;
+  border-bottom: 1px solid #ddd;
+}
+
+.contact-table th {
+  background-color: #FFA500; /* Bright orange header */
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.contact-table tr:nth-child(even) {
+  background-color: #f4f6f9; /* Light gray for alternate rows */
+}
+
+.contact-table tr:nth-child(odd) {
+  background-color: #FFFFFF; /* White for contrast */
+}
+
+/* Service */
+
+.services-section {
+  margin-top: 40px;
+}
+
+.services-section h2 {
+  color: #FFA500;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.services-section p {
+  color: #CCCCCC;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-item img {
+  width: 150px;
+  margin-bottom: 15px;
+  text-align: center;
+  max-width: 200px;
+}
+
+.service-item h3 {
+  color: #FFA500;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.service-item p {
+  font-size: 0.9rem;
+  color: #FFFFFF;
+  line-height: 1.4;
+}

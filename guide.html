@@ -17,6 +17,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <!-- Custom css -->
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/guide.css">
   <title>Tourist Guide | HeroDev Travel</title>
 </head>
 <body>
@@ -44,7 +45,83 @@
     </nav>
   </div>
   <!-- ./End navbar -->
+  <!-- Section 1 -->
+  <div class="section1-container">
+    <div class="container">
+      <img src="./images/daymanite.jpg">
+      <div class="description text-wrap">
+       <p class="title">Half-Day on Daymaniyat Island </p>
+        <p id="price">From <span>340.00 <sup>OMR</sup></span></p>
+        <form action="">
+          <label for="date">Select Date of Activity</label>
+          <br>
+          <input type="datetime-local">
+          <br>
+          <button>Book now</button>
+        </form>
+      </div>
+      <h2 class="text-white">Details</h2>
+      <p class="text-white package-desc">Our trip begins at 8:30Am when we head to the most amazing island in Oman, (Daymaniyat island). It’s known for its rare plants and animals, so it’s classified to be a nature preserve. In this private trip you will spend 9 hours full of adventures and fun, as you have the chance to try marine adventures such as (Diving,), in the pristine blue water. Our trip ends at 5:30pm, so it will be a thrilling day. Book it now!</p>
+      <h4 class="text-white">-Package Includes:</h4>
+      <p class="text-white">Snorkeling gear</p>  
+      <p class="text-white">Doughnut Towable tube.</p>  
+      <p class="text-white">Volleyball</p> 
+      <p class="text-white">Beach activities</p> 
+      <p class="text-white">Life jackets</p>
+      <p class="text-white">Live BBQ lunch</p>  
+      <p class="text-white">Beach setup and shades</p>  
+      <p class="text-white">Visiting permits</p>  
+    </div>
+  </div>
+  <!-- ./End Section 1 -->
 
+  <!-- Section 2 -->
+  <div class="container-fluid">
+    <h2 class="text-center title-page h1 ">What <span>Our Clients</span> Says</h2>
+    <hr>
+    <!-- Slider -->
+     <div class="col-md-12 slider-container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <!-- ./Indicators -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p class="client-desc" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa quod laborum eius possimus nesciunt, hic dolore a, fuga molestiae laudantium quo? Facere totam ut sed voluptatem eum et, eos est!</p>
+            <h3 class="client-name">Mohammad <span>Fatih</span></h3>
+            <img src="./images/fd.jpg" class=" client-img rounded-circle mx-auto d-block" width="110">
+          </div>
+          
+          <div class="carousel-item">
+            <p class="client-desc" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa quod laborum eius possimus nesciunt, hic dolore a, fuga molestiae laudantium quo? Facere totam ut sed voluptatem eum et, eos est!</p>
+            <h3 class="client-name">John Paul <span>Adam</span></h3>
+            <img src="./images/240_F_302884605_actpipOdPOQHDTnFtp4zg4RtlWzhOASp.jpg" class=" client-img rounded-circle mx-auto d-block" width="100">
+          </div>
+          
+          <div class="carousel-item">
+            <p class="client-desc" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa quod laborum eius possimus nesciunt, hic dolore a, fuga molestiae laudantium quo? Facere totam ut sed voluptatem eum et, eos est!</p>
+            <h3 class="client-name">Mike Paul <span>Adam</span></h3>
+            <img src="./images/jfg.jpg" class=" client-img rounded-circle mx-auto d-block" width="100">
+          </div> 
+          <div>
+            <button class="carousel-control-prev btn-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next btn-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+    <!-- End Slider -->
+      </div>
+    </div>
+  </div>
   <!-- Footer -->
   <div class="footer-container">
     <div class="logo">
@@ -63,7 +140,7 @@
         <p>+918 91491828</p>
         <p>Herodev@gmail.com</p>
     </div>
-</div>
+  </div>
      
 </body>
 </html>

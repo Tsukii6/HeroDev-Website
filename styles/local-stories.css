@@ -1,3 +1,12 @@
+:root {
+    --primary-color: #2D3250;
+    --secondary-color: #676F9D;
+    --third-color: #F9B17A;
+    --four-color: #424769;
+    --white: #fff;
+    --black: #000;
+}
+
 .section1-container {
     height: 400px;
     background-image: url("/images/Wahiba-Sands9.jpg");
@@ -40,12 +49,64 @@
 }
 
 /* Section 2 */
-.container-fluid {
-    background-color: #2D3250;
+.section2-container {
+    background-color: var(--white);
 }
 
-.container-fluid h1 {
-    padding: 50px 0 50px 120px;
+.section2-container h1 {
+    padding: 50px 0 0 120px;
     font-size: 1.7rem;
-    font-weight: 600;
+    font-weight: 700;
 }
+
+.section2-container>p {
+    padding-left: 120px;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.795);
+}
+
+.section2-container button {
+    border: 1px solid var(--black);
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 30px;
+    color: var(--black);
+    background-color: var(--white);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.btn1 {
+    margin-left: 120px;
+}
+
+.card-container {
+    margin-left: 130px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+}
+
+.img-card{
+    width: 368px;
+}
+
+.img-card img{
+    width: 368px;
+    height: 276px;
+    border-radius: 10px;
+}
+.img-card>p{
+    color: var(--black);
+    padding: 10px 0 0 0;
+    font-weight: 700;
+}
+
+.img-card> span {
+    color: white;
+}
+
+

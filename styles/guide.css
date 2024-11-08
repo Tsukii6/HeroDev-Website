@@ -1,0 +1,146 @@
+:root {
+  --color-text: #2D3250;
+  --secondary-color: #424769;
+  --third-color: #F9B17A;
+  --four-color: #676F9D;
+}
+
+
+.section1-container {
+  width: auto;
+  height: 1030px;
+  background-color: var(--secondary-color);
+}
+
+.container{
+  /* transform: translate(50px, 0); */
+  padding-left: 90px;
+}
+
+.container img{
+  width: 270px;
+  height: 320px;
+  border-radius: 10px;
+  margin-right: 40px;
+  
+}
+
+.description {
+  display: inline-block;
+  translate: 0 70px;
+}
+
+.description p, label {
+  color: white;
+  padding-top: 20px;
+}
+.description .title {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.description #price {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.description #price span{
+  color: var(--third-color);
+}
+
+.description form {
+  margin: 10px 0 0 10px;
+}
+
+.description label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.description input {
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Slider */
+.container-fluid {
+  background: #ffffff;
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  padding: 60px 90px;
+}
+
+.title-page {
+  font-weight: 700;
+  color: var(--color-text);
+
+}
+.title-page span {
+  color: var(--third-color);
+}
+
+.slider-container {
+  margin-bottom: 60px;
+}
+
+.carousel-indicators button {
+  background-color: var(--third-color);
+  height: 4px;
+
+  transform: translate(0, 60px);
+}
+
+.carousel-indicators >.active {
+  background-color: var(--third-color);
+  height: 4px;
+}
+
+.client-desc {
+  text-align: center;
+  font-style: italic;
+}
+
+.client-name {
+  font-size: 18px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.client-name span {
+  font-weight: bold;
+  color: var(--third-color);
+}
+
+.client-img {
+  padding: 1px;
+  border: 2px solid var(--color-text);
+}
+
+.btn-prev, .btn-next {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-text);
+  transform: translate(0, 100px);
+  border-radius: 5px;
+}
+
+.container h2, h4{
+  margin-top: 80px;
+  padding-left: 10px;
+}
+
+.package-desc {
+  width: 700px;
+}
+
+/* Footer */
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */

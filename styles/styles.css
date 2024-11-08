@@ -1,3 +1,12 @@
+:root {
+    --primary-color: #2D3250;
+    --secondary-color: #676F9D;
+    --third-color: #F9B17A;
+    --four-color: #424769;
+    --white: #fff;
+    --black: #000;
+}
+
 * {
     box-sizing: border-box;
     font-family: "Raleway", sans-serif;
@@ -135,7 +144,6 @@ body {
     position: relative;
     left: 20px;
     border: none;
-    color: #F9B17A;
     font-size: 1rem;
     font-weight: bold;
     padding: 10px;
@@ -146,53 +154,47 @@ body {
 
 /* Section 2 */
 .section2-container {
-    width: auto;
-    height: auto;
-    background-color: #2D3250;
+    background-color: var(--white);
 }
 
 .section2-h1 {
     margin: 0;
     padding-top: 4rem;
-    position: relative;
-    left: 80px;
-    color: white;
+    padding-left: 130px;
+    color: var(--black);
 }
 
 .card-container {
     display: grid;
     place-items: center;
-    margin-inline: 5rem;
-    padding-block-start: 3rem ;
-    padding-block-end: 6rem;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 3.5rem;
-    row-gap: 4.7rem;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0;
+    row-gap: 2rem;
+    margin-left: 130px;
+    margin-right: 130px;
+    margin-top: 40px;
 }
 
 .card-article {
-    display: inline-block;
-    position: relative;
+    width: 300px;
     /* overflow: hidden;  */
 }
 
 .card-img {
-    width: 100%;
+    width: 300px;
+    height: 350px;
     border-radius: 1.5rem;
 }
 
 .card-data {
-    width: 220px;
+    width: 240px;
     background-color: white;
     padding: 1rem 1.5rem;
     box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
     border-radius: 1rem;
-    position: absolute;
-    bottom: -4rem;
-    left: 0;
-    right: 0;
-    margin-inline: auto ;
-   
+    position: relative;
+    left: 25px;
+    bottom: 60px;
 }
 
 .card-description {
