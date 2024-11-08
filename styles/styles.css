@@ -278,7 +278,7 @@ body {
     margin-bottom: 0;
 }
 
-.logo p, .about p , .contact p{
+.logo p{
     color: rgba(255, 255, 255, 0.712);
     font-size: 0.8rem;
     font-weight: 500;
@@ -286,17 +286,11 @@ body {
     
 }
 
-.about h1, .contact h1{
-    color: white;
-    font-size: 30px;
-    font-weight: 700;
-    margin: 30px 0 20px 0;
-}
-
-.contact {
-    position: relative;
-    top: -12px;
-}
+th, td {
+    padding: 15px 90px 15px 15px;
+    text-align: left;
+    color: var(--white);
+  }
 
 
 
@@ -336,51 +330,6 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.services-section {
-    margin-top: 40px;
-}
-
-.services-section h2 {
-    color: #FFA500;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.services-section p {
-    color: #CCCCCC;
-    font-size: 1rem;
-    margin-bottom: 30px;
-}
-
-.services {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.service-item {
-    text-align: center;
-    max-width: 200px;
-}
-
-.service-item img {
-    width: 150px;
-    margin-bottom: 15px;
-}
-
-.service-item h3 {
-    color: #FFA500;
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.service-item p {
-    font-size: 0.9rem;
-    color: #FFFFFF;
-    line-height: 1.4;
 }
 
 /* === Contact Us Page Styles === */
