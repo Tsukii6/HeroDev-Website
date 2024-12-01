@@ -378,6 +378,35 @@ th, td {
     cursor: pointer;
 }
 
+/* text panner */
+.group {
+    height: 40px;
+    color: var(--third-color);
+    font-weight: 500;
+    background-color: var(--four-color);
+    border-bottom: 2px solid var(--third-color);   
+    border-top: 2px solid var(--third-color);
+    position: relative;
+}
+
+.group .scrolling-text {
+    position: relative;
+    margin: 5px 0;
+    padding: 0;
+    width: 100%;
+    animation: my-animation 20s linear infinite;
+}
+
+@keyframes my-animation {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 
 
 
