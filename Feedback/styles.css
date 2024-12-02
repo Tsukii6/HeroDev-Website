@@ -1,0 +1,70 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for body */
+body {
+    font-family:  "Raleway", sans-serif;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main container */
+.container {
+    background-color:  #2D3250;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    color:white;
+    margin-bottom: 10px;
+}
+
+/* Form input fields */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Radio buttons and checkboxes */
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FFA500;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e9eaf0;
+}
+
+/* Error messages */
+.error {
+    color: red;
+    font-size: 14px;
+}
+label{
+    color: #f4f6f9;
+}

@@ -1,77 +1,52 @@
-const randomNumber = Math.random();
+let compWord = document.querySelector(".word")
+let hint = document.querySelector(".hint span")
+const refreshBtn = document.querySelector(".refresh-word"),
+checkBtn = document.querySelector(".check-word"),
+inputWord = document.querySelector("input");
+let correctWord, counter;
+const time = document.querySelector(".time span b");
 
-let score = JSON.parse(localStorage.getItem('score'))
-
-if (!score) {
-  score = {
-    wins: 0,
-    lose: 0,
-    ties: 0
-  }
-}
-
-updateScoreEle()
-
-function pickComputerMove() {
-  let computerMove = '';
-  if (randomNumber >= 0 && randomNumber < 1/3) {
-    computerMove = 'rock'
-  } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
-    computerMove = 'paper'
-  } else if (randomNumber >= 2/3 && randomNumber < 1) {
-    computerMove = 'scissor'
-  }
-  return computerMove
-}
-
-function playGame(playerMove) {
-  const computerMove = pickComputerMove();
-  let result = '';
-
-  if (playerMove === 'rock') {
-    if (computerMove === 'rock') {
-      result = 'Tie'
-    } else if (computerMove === 'paper') {
-      result = 'You lose'
-    } else if (computerMove === 'scissor'){
-      result = 'You win!'
+const initTimer = maxTime => {
+  clearInterval(counter)
+  counter = setInterval(() => {
+    if (maxTime > 0){
+      maxTime--
+      return time.innerHTML = maxTime; 
     }
-
-  } else if (playerMove === 'paper') {
-    if (computerMove === 'paper') {
-      result = 'Tie'
-    } else if (computerMove === 'scissor') {
-      result = 'You lose'
-    } else if (computerMove === 'rock'){
-      result = 'You win!'
-    }
-
-  } else if (playerMove === 'scissor') {
-    if (computerMove === 'scissor') {
-      result = 'Tie'
-    } else if (computerMove === 'rock') {
-      result = 'You lose'
-    } else if (computerMove === 'paper'){
-      result = 'You win!'
-    }
-  }
-
-  if (result === 'Tie') {
-    score.ties += 1
-  } else if (result === 'You lose') {
-    score.lose += 1
-  } else if (result === 'You win!') {
-    score.wins += 1
-  }
-
-  localStorage.setItem('score', JSON.stringify(score))
-
-  document.querySelector('.displayResult').innerHTML = result;
-  document.querySelector('.play').innerHTML = `You <img class="play-img" src="./${playerMove}-emoji.png"> <img class="play-img" src="./${computerMove}-emoji.png"> Computer `
-  
-  updateScoreEle()
+    clearInterval(counter)
+    alert(`Time's up ${correctWord} was the correct word`)
+    initGame()
+  }, 1000)
 }
 
-function updateScoreEle() {
-  document.querySelector('.displayScore').innerHTML = `Wins: ${score.wins}, Losses: ${score.lose}, Ties: ${score.ties}`
+const initGame = () => {
+  initTimer(30)
+  let randomObj = words[Math.floor(Math.random() * words.length)]; // getting random object from words
+  console.log(randomObj)
+  let wordArray = randomObj.word.split(""); 
+  for(let i=wordArray.length -1; i > 0; i-- ){
+    let j = Math.floor(Math.random() * wordArray.length);
+    let temp = wordArray[i];
+    wordArray[i] = wordArray[j]
+    wordArray[j] = temp
+  }
+  compWord.innerHTML = wordArray.join("")
+  hint.innerHTML = randomObj.hint
+  correctWord = randomObj.word
 }
+
+initGame()
+
+refreshBtn.addEventListener("click", initGame)
+checkBtn.addEventListener("click", () => {
+  if(!inputWord.value) return alert("Please enter a word check")
+  if (correctWord === inputWord.value) {
+    alert(`Congrats!! ${correctWord} is a correct word`)
+    initGame()
+  }else {
+    alert(`Oops! ${inputWord.value} is not a correct word`)
+    initGame()
+  }
+})
+
+
