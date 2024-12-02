@@ -8,7 +8,7 @@ function ObjectType2(about, contact) {
   this.about = about;
   this.contact = contact;
 }
-
+//Create arrays to store instances of these objects.
 var array1 = [ 
   new ObjectType1("Fatima", "153141@student.squ.edu.com", "+39 338 331 1604"), 
   new ObjectType1("Shatha", "s142045@student.squ.edu.com", "+968 9149 1828"),
@@ -20,9 +20,10 @@ var array2 = [
   new ObjectType2(`FunPage`, "Herodev@gmail.com"),
 ];
 
+//populate these tables with data from the arrays.
 function populateTable1() {
   let table = document.getElementById("table1").getElementsByTagName('tbody')[0];
-  table.innerHTML = ""; 
+  table.innerHTML = ""; //clear existing row
   array1.forEach(function(item) {
       var row = table.insertRow();
       row.insertCell(0).innerText = item.name;

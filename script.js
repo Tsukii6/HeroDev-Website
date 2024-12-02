@@ -42,7 +42,7 @@ let images3 = ["./images/image5.jpg", "./images/daymanite.jpg", "./images/salend
 
 function changeImages(image, imagesList) {
     setInterval(function(){
-        let rnd = Math.floor(Math.random()*imagesList.length);
+        let rnd = Math.floor(Math.random()*imagesList.length); //pick the photo randomly
         image.src = imagesList[[rnd]]
     }, 3000)
 }
