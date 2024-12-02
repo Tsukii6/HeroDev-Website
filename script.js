@@ -50,3 +50,4 @@ function changeImages(image, imagesList) {
 changeImages(image1, images1)
 changeImages(image2, images2)
 changeImages(image3, images3)
+

@@ -6,6 +6,7 @@
     <title>About Us | HeroDev Travel</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/about.css">
+    <script defer src="./table.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -44,7 +45,7 @@
             <section class="contact-table-section">
                 <h2>Our Team</h2>
                 <div class="table-container">
-                    <table class="contact-table">
+                    <table class="contact-table" id="table1">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -53,7 +54,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <!-- <tr>
                                 <td>Fatemeh</td>
                                 <td>153141@student.squ.edu.com</td>
                                 <td>+39 338 331 1604</td>
@@ -68,9 +69,10 @@
                                 <td>Rawan</td>
                                 <td>138028@student.squ.edu.com</td>
                                 <td>+968 7928 5566</td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
+                    <form onsubmit="searchArray1(); return false;"> <input type="text" id="searchInput1" placeholder="Search Array 1"> <button type="submit">Search</button> </form>
                 </div>
             </section>
 
@@ -105,19 +107,25 @@
             <h1>Travel</h1>
             <p>travel with us and explore the world without limit</p>
         </div>
-        <table>
-            <tr>
-                <th>About</th>
-                <th>Contact</th>
-            </tr>
-            <tr>
-                <td>Blog & News</td>
-                <td>+918 91491828</td>
-            </tr>
-            <tr>
-                <td>Features</td>
-                <td>Herodev@gmail.com</td>
-            </tr>
+        <table id="table2">
+            <thead>
+                <tr>
+                    <th>About</th>
+                    <th>Contact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="./Feedback/feedback.html">Feedback</a></td>
+                    <td>+918 91491828</td>
+                </tr>
+                <tr>
+                    <td><a href="./funpage/funpage.html">FunPage</a></td>
+                    <td>Herodev@gmail.com</td>
+                </tr>
+            </tbody>
+            
+            
         </table>
     </div>
 </body>

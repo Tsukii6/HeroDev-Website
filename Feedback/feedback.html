@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Feedback Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Customer Feedback Questionnaire</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
 </head>
 <body>
     <div class="container">
         <h2>Customer Feedback Questionnaire</h2>
         <form id="feedbackForm" action="#" method="POST" onsubmit="return validateForm()">
             <!-- Name Field -->
-            <label for="name">Your Name (at least 3 characters):</label>
+            <label for="name">Your Name (at least 3 characters, alphabets only):</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
             <br><br>
 
@@ -30,7 +30,7 @@
             <br><br>
 
             <!-- Comments Textarea -->
-            <label for="comments">Your Comments ( max 500 characters):</label><br>
+            <label for="comments">Your Comments (max 500 characters):</label><br>
             <textarea id="comments" name="comments" rows="4" cols="50" maxlength="500"></textarea>
             <br><br>
 
@@ -39,6 +39,6 @@
         </form>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Link to JS file -->
 </body>
 </html>

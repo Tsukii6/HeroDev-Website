@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Calculator | HeroDev Travel</title>
+    <link rel="stylesheet" href="calculator.css">
+    <script defer src="calculator.js"></script>
+   
+</head>
+<body>
+    <!-- Bill Calculator Section -->
+    <main class="calculator-section">
+        <h1>Bill Calculator</h1>
+        <form id="bill-form">
+            <label for="item-price">Item Price (OMR):</label>
+            <input type="number" id="item-price" required>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" required>
+
+            <label for="age">Your Age:</label>
+            <input type="number" id="age" required>
+
+            <button type="submit">Calculate Bill</button>
+        </form>
+
+        <div id="result" class="result"></div>
+    </main>
+</body>
+</html>
