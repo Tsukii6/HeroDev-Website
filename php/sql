@@ -1,0 +1,50 @@
+CREATE TABLE stuff (
+	id INT(11) NOT NULL AUTO_INCREMENT,
+    names VARCHAR(30) NOT NULL,
+    phone_num VARCHAR(30) NOT NULL,
+    emails VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE users (
+	id INT(11) NOT NULL AUTO_INCREMENT,
+    username VARCHAR(30) NOT NULL,
+    pwd VARCHAR(255) NOT NULL,
+    emails VARCHAR(100) NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIME,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE comment (
+	id INT(11) NOT NULL AUTO_INCREMENT,
+    username VARCHAR(30) NOT NULL,
+    comment_text VARCHAR(255) NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIME,
+    users_id INT(11),
+    PRIMARY KEY (id),
+    FOREIGN KEY (users_id) REFERENCE users (id) ON DELETE SET NULL
+);
+
+INSERT INTO users (username, pwd, emails) VALUES ('Dani', 'Danii123', 'daniJhon@gmail.com');
+
+INSERT INTO users (username, pwd, emails) VALUES ('Bruno', 'BrunoBaka1234', 'bruno@gmail.com');
+
+INSERT INTO users (username, pwd, emails) VALUES ('Ali', 'AliPassword1234', 'AliMohammed@gmail.com');
+
+INSERT INTO users (username, pwd, emails) VALUES ('Sara', 'saraSuperSecretPwd', 'SaraAli23@gmail.com');
+
+
+INSERT INTO comments (username, comment_text, users_id) VALUES ('Shatha', 'From start to finish, my tours in Oman with HeroDev Travel and Tourism were great!', 2)
+
+
+INSERT INTO comments (username, comment_text, users_id) VALUES ('Ali', 'your company proposed fantastic tours sto reasonoble price', 4)
+
+
+INSERT INTO comments (username, comment_text, users_id) VALUES ('Sara', 'we made one travel with HeroDev Travels, to the wahiba sand desert the trip was very good.', 5)
+
+INSERT INTO comments (username, comment_text, users_id) VALUES ('Tahgreed', 'I never felt awkward or uncomfortable with any of the guides. Highly recommend this company ', 6);
+
+
+INSERT INTO stuff (names, phone_num, emails) VALUES ('shatha', '+982 9149 1828', 'tsukoyochan@gmail.com');
+
+INSERT INTO stuff (names, phone_num, emails) VALUES ('rawan', '+968 7928 5566 ', '138028@student.squ.edu.com');
