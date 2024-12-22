@@ -1,8 +1,8 @@
 <?php
-$servername = "sql104.infinityfree.com";
-$username = "if0_37960595";
-$password  = "R4VIt0x5ZCW9nrw";
-$database = "if0_37960595_clients";
+$servername = "localhost";
+$username = "root";
+$password  = "";
+$database = "myCompany";
 
 // Create Connection
 $connection = new mysqli($servername, $username, $password, $database);
@@ -12,8 +12,8 @@ if ($connection->connect_error) {
   die("Connection failed: ". $connection->connect_error);
 }
 
-$id = '';
-$name = '';
+$id = "";
+$name = "";
 $email ='';
 $phone = '';
 $address = '';
@@ -37,14 +37,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $row = $result->fetch_assoc();
 
   if (!$row) {
-    header("location: /website/index.php");
+    header("location: ./index.php");
     exit;
   }
 
-  $name = $_POST["name"];
-  $email = $_POST["email"];
-  $phone = $_POST["phone"];
-  $address = $_POST["address"];
+  $name = $row["name"];
+  $email = $row["email"];
+  $phone = $row["phone"];
+  $address = $row["address"];
 
 } else {
     // Post method: update the data od the clients
@@ -55,12 +55,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $address = $_POST["address"];
 
     do {
-        if (empty($name) || empty($email) || empty($phone) || empty($address)) {
+        if (empty($id) || empty($name) || empty($email) || empty($phone) || empty($address)) {
             $errorMessage = "All the fields are required";
             break;
         }
 
-        $sql = "UPDATE clients ". "SET name = '$name', email = '$email', phone = `$phone`, address = `$address`". "WHERE id = $id";
+        $sql = "UPDATE clients ". 
+                "SET name = '$name', email = '$email', phone = '$phone', address = '$address'". "WHERE id = $id";
 
         $result = $connection->query($sql);
 
@@ -93,39 +94,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     <?php
     if ( !empty($errorMessage) ) {
-      echo `
-      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      echo "
+      <div class='alert alert-warning alert-dismissible fade show' role='alert'>
       <strong>$errorMessage</strong>
-      <button type="button" class="btn-close" data-bs-dismiss='alert' aria-label="Close"></button>
+      <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
     </div>
-      `;
+      ";
     }
     ?>
 
     <form method="post">
-        <input type="hidden" name="id" value="<?php echo $id ?>">
+        <input type="hidden" name="id" value="<?php echo $id; ?>">
       <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Name</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control" name="name" value="<?php echo $name ?>">
+          <input type="text" class="form-control" name="name" value="<?php echo $name; ?>">
         </div>
       </div>
       <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Email</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control" name="email" value="<?php echo $email ?>">
+          <input type="text" class="form-control" name="email" value="<?php echo $email; ?>">
         </div>
       </div>
       <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Phone</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control" name="phone" value="<?php echo $phone ?>">
+          <input type="text" class="form-control" name="phone" value="<?php echo $phone; ?>">
         </div>
       </div>
       <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Address</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control" name="address" value="<?php echo $address ?>">
+          <input type="text" class="form-control" name="address" value="<?php echo $address; ?>">
         </div>
       </div>
 
@@ -133,16 +134,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
       <?php
       if ( !empty($errorMessage) ) {
-        echo `
-        <div class="row mb-3">
-        <div class="offset-sm-3 col-sm-6">
-          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        echo "
+        <div class='row mb-3'>
+        <div class='offset-sm-3 col-sm-6'>
+          <div class='alert alert-warning alert-dismissible fade show' role='alert'>
             <strong>$errorMessage</strong>
-            <button type="button" class="btn-close" data-bs-dismiss='alert' aria-label="Close"></button>
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
           </div>
         </div>
       </div>
-        `;
+        ";
       }
 
       ?>

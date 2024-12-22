@@ -1,8 +1,8 @@
 <?php
-$servername = "sql104.infinityfree.com";
-$username = "if0_37960595";
-$password  = "R4VIt0x5ZCW9nrw";
-$database = "if0_37960595_clients";
+$servername = "localhost";
+$username = "root";
+$password  = "";
+$database = "myCompany";
 
 // Create Connection
 $connection = new mysqli($servername, $username, $password, $database);
@@ -70,12 +70,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <?php
     if ( !empty($errorMessage) ) {
-      echo `
-      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      echo "
+      <div class='alert alert-warning alert-dismissible fade show' role='alert'>
       <strong>$errorMessage</strong>
-      <button type="button" class="btn-close" data-bs-dismiss='alert' aria-label="Close"></button>
+      <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
     </div>
-      `;
+      ";
     }
     ?>
 
@@ -109,16 +109,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       <?php
       if ( !empty($errorMessage) ) {
-        echo `
-        <div class="row mb-3">
-        <div class="offset-sm-3 col-sm-6">
-          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        echo "
+        <div class='row mb-3'>
+        <div class='offset-sm-3 col-sm-6'>
+          <div class='alert alert-warning alert-dismissible fade show' role='alert'>
             <strong>$errorMessage</strong>
-            <button type="button" class="btn-close" data-bs-dismiss='alert' aria-label="Close"></button>
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
           </div>
         </div>
       </div>
-        `;
+        ";
       }
 
       ?>

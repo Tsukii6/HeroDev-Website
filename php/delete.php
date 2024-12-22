@@ -1,10 +1,10 @@
 <?php
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
-    $servername = "sql104.infinityfree.com";
-    $username = "if0_37960595";
-    $password  = "R4VIt0x5ZCW9nrw";
-    $database = "if0_37960595_clients";
+    $servername = "localhost";
+    $username = "root";
+    $password  = "";
+    $database = "myCompany";
     
     // Create Connection
     $connection = new mysqli($servername, $username, $password, $database);
